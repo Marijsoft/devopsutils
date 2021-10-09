@@ -149,7 +149,7 @@ if not (edit1.Text.Contains('https://')) then
 Edit1.Text:='https://'+Edit1.Text;
         TabControl1.SetActiveTabWithTransition(TabItem3, TTabTransition.Slide);
         sito := 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url='
-          + Edit1.Text + k;
+          + Edit1.Text + p;
         tthread.CreateAnonymousThread(
                 procedure
                 begin
