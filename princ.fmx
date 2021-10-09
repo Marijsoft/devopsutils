@@ -1,0 +1,383 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'MarijSoft DevOps Utility'
+  ClientHeight = 412
+  ClientWidth = 628
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object GroupBox1: TGroupBox
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 377.000000000000000000
+    Size.Height = 81.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Inserisci sito web'
+    TabOrder = 0
+    object Edit1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 38
+      Position.X = 24.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 305.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      object ClearEditButton1: TClearEditButton
+        CanFocus = False
+        Cursor = crArrow
+        Size.Width = 28.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+      end
+    end
+  end
+  object Button1: TButton
+    Position.X = 416.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 177.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Informazioni sito web'
+    OnClick = Button1Click
+    object Button2: TButton
+      Position.Y = 24.000000000000000000
+      Size.Width = 177.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Controlla propagazione DNS'
+      OnClick = Button2Click
+      object Button3: TButton
+        Position.Y = 23.000000000000000000
+        Size.Width = 177.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Controlla PageSpeed'
+        OnClick = Button3Click
+      end
+    end
+  end
+  object TabControl1: TTabControl
+    Position.X = 8.000000000000000000
+    Position.Y = 97.000000000000000000
+    Size.Width = 601.000000000000000000
+    Size.Height = 288.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 0
+    TabOrder = 2
+    TabPosition = None
+    Sizes = (
+      601s
+      288s
+      601s
+      288s
+      601s
+      288s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabItem1'
+      object Memo1: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Align = Client
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Size.Width = 581.000000000000000000
+        Size.Height = 268.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 577.000000000000000000
+        Viewport.Height = 264.000000000000000000
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabItem2'
+      object StringGrid1: TStringGrid
+        Align = Client
+        CanFocus = True
+        ClipChildren = True
+        Size.Width = 601.000000000000000000
+        Size.Height = 288.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        RowCount = 15
+        Viewport.Width = 581.000000000000000000
+        Viewport.Height = 263.000000000000000000
+      end
+    end
+    object TabItem3: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabItem3'
+      object Label1: TLabel
+        Position.X = 190.000000000000000000
+        Position.Y = 224.000000000000000000
+        Text = 'Velocit'#224' del sito web:'
+        TabOrder = 0
+      end
+      object Label2: TLabel
+        StyledSettings = [Family]
+        Position.X = 307.000000000000000000
+        Position.Y = 224.000000000000000000
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claBlue
+        TabOrder = 1
+      end
+      object TMSFMXCircularGauge1: TTMSFMXCircularGauge
+        DisableFocusEffect = False
+        Position.X = 5.000000000000000000
+        Position.Y = 33.000000000000000000
+        TabOrder = 8
+        Size.Width = 145.000000000000000000
+        Size.Height = 145.000000000000000000
+        Size.PlatformDefault = False
+        Sections = <>
+        SetPoints = <>
+        ExtraNeedles = <>
+        DivisionFormat = '0'
+        SubDivisionFormat = '0.0'
+      end
+      object Label3: TLabel
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 32.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 97.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'PERFORMANCE'
+        TabOrder = 9
+      end
+      object TMSFMXCircularGauge2: TTMSFMXCircularGauge
+        DisableFocusEffect = False
+        Position.X = 156.000000000000000000
+        Position.Y = 33.000000000000000000
+        TabOrder = 6
+        Size.Width = 145.000000000000000000
+        Size.Height = 145.000000000000000000
+        Size.PlatformDefault = False
+        Sections = <>
+        SetPoints = <>
+        ExtraNeedles = <>
+        DivisionFormat = '0'
+        SubDivisionFormat = '0.0'
+      end
+      object Label4: TLabel
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 190.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 97.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'ACCESSIBILITA'#39
+        TabOrder = 7
+      end
+      object TMSFMXCircularGauge3: TTMSFMXCircularGauge
+        DisableFocusEffect = False
+        Position.X = 305.000000000000000000
+        Position.Y = 33.000000000000000000
+        TabOrder = 4
+        Size.Width = 145.000000000000000000
+        Size.Height = 145.000000000000000000
+        Size.PlatformDefault = False
+        Sections = <>
+        SetPoints = <>
+        ExtraNeedles = <>
+        DivisionFormat = '0'
+        SubDivisionFormat = '0.0'
+      end
+      object Label5: TLabel
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 345.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 72.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'PRATICITA'#39
+        TabOrder = 5
+      end
+      object TMSFMXCircularGauge4: TTMSFMXCircularGauge
+        DisableFocusEffect = False
+        Position.X = 454.000000000000000000
+        Position.Y = 33.000000000000000000
+        TabOrder = 2
+        Size.Width = 145.000000000000000000
+        Size.Height = 145.000000000000000000
+        Size.PlatformDefault = False
+        Sections = <>
+        SetPoints = <>
+        ExtraNeedles = <>
+        DivisionFormat = '0'
+        SubDivisionFormat = '0.0'
+      end
+      object Label6: TLabel
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 512.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 33.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'SEO'
+        TabOrder = 3
+      end
+      object Label7: TLabel
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 249.000000000000000000
+        Position.Y = 249.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'ANALISI IN CORSO...'
+        Visible = False
+        TabOrder = 10
+      end
+    end
+  end
+  object NetHTTPClient1: TNetHTTPClient
+    AcceptEncoding = 'gzip, deflate'
+    UserAgent = 'Embarcadero URI Client/1.0'
+    Left = 192
+    Top = 176
+  end
+  object RESTClient1: TRESTClient
+    Accept = 'application/json, text/plain; q=0.9, text/html;q=0.8,'
+    AcceptCharset = 'utf-8, *;q=0.8'
+    AcceptEncoding = 'gzip'
+    BaseURL = 'https://api.viewdns.info/propagation'
+    Params = <>
+    OnHTTPProtocolError = RESTClient1HTTPProtocolError
+    Left = 352
+    Top = 128
+  end
+  object RESTRequest1: TRESTRequest
+    AssignedValues = [rvConnectTimeout, rvReadTimeout]
+    Client = RESTClient1
+    Params = <
+      item
+        Name = 'domain'
+        Value = 'marijsoft.com'
+      end
+      item
+        Name = 'apikey'
+        Value = '801f1f58e5487bf673ae2c77608567e8faf1a3cc'
+      end
+      item
+        Name = 'output'
+        Value = 'json'
+      end>
+    Response = RESTResponse1
+    OnHTTPProtocolError = RESTRequest1HTTPProtocolError
+    Left = 424
+    Top = 112
+  end
+  object RESTResponse1: TRESTResponse
+    ContentType = 'application/json'
+    ContentEncoding = 'gzip'
+    RootElement = 'response.server'
+    Left = 504
+    Top = 120
+  end
+  object RESTResponseDataSetAdapter1: TRESTResponseDataSetAdapter
+    Active = True
+    Dataset = FDMemTable1
+    FieldDefs = <>
+    Response = RESTResponse1
+    TypesMode = JSONOnly
+    NestedElements = True
+    Left = 384
+    Top = 232
+  end
+  object FDMemTable1: TFDMemTable
+    Active = True
+    FieldDefs = <
+      item
+        Name = 'location'
+        DataType = ftWideString
+        Size = 12
+      end
+      item
+        Name = 'resultvalue'
+        DataType = ftWideString
+        Size = 14
+      end
+      item
+        Name = 'resultstatus'
+        DataType = ftWideString
+        Size = 2
+      end>
+    IndexDefs = <>
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvUpdateChngFields, uvUpdateMode, uvLockMode, uvLockPoint, uvLockWait, uvRefreshMode, uvFetchGeneratorsPoint, uvCheckRequired, uvCheckReadOnly, uvCheckUpdatable]
+    UpdateOptions.LockWait = True
+    UpdateOptions.FetchGeneratorsPoint = gpNone
+    UpdateOptions.CheckRequired = False
+    StoreDefs = True
+    Left = 504
+    Top = 208
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = FDMemTable1
+    ScopeMappings = <>
+    Left = 296
+    Top = 200
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = StringGrid1
+      Columns = <
+        item
+          MemberName = 'location'
+          Header = 'Localit'#224
+          TextWidth = 25
+        end
+        item
+          MemberName = 'resultstatus'
+          Header = 'Risultato test'
+          TextWidth = 15
+        end>
+    end
+  end
+end
