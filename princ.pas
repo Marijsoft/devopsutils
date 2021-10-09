@@ -20,7 +20,7 @@ uses
         FMX.Bind.DBEngExt, FMX.Bind.Grid, System.Bindings.Outputs,
         FMX.Bind.Editors,
         Data.Bind.Grid, Data.Bind.DBScope, FMX.Grid, FMX.TMSBaseControl,
-        FMX.TMSGauge;
+        FMX.TMSGauge,System.NetEncoding;
 
 type
         TForm1 = class(TForm)
@@ -136,11 +136,15 @@ end;
 
 procedure TForm1.Button3Click(Sender: TObject);
 var
-        jsontesto, sito, s: string;
+        jsontesto, sito, s,p: string;
         JSONValue: TJSonValue;
+        enc:TNetEncoding;
 const
-        k = '&key=AIzaSyCh0v5ISSAstAbG1MTgdZjXMDIgPda49UI';
+        k = 'JmtleT1BSXphU3lDaDB2NUlTU0FzdEFiRzFNVGdkWmpYTURJZ1BkYTQ5VUk=';
 begin
+enc:=TNetEncoding.Create;
+p:=enc.Base64.Decode(k);
+enc.DisposeOf;
 if not (edit1.Text.Contains('https://')) then
 Edit1.Text:='https://'+Edit1.Text;
         TabControl1.SetActiveTabWithTransition(TabItem3, TTabTransition.Slide);
