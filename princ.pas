@@ -64,9 +64,7 @@ type
                 procedure RESTClient1HTTPProtocolError
                   (Sender: TCustomRESTClient);
         private
-        { Private declarations }
-          const
-                k = '&key=AIzaSyCh0v5ISSAstAbG1MTgdZjXMDIgPda49UI';
+                { Private declarations }
         public
                 { Public declarations }
         end;
@@ -138,9 +136,13 @@ end;
 
 procedure TForm1.Button3Click(Sender: TObject);
 var
-        jsontesto, sito, s, k: string;
+        jsontesto, sito, s: string;
         JSONValue: TJSonValue;
+const
+        k = '&key=AIzaSyCh0v5ISSAstAbG1MTgdZjXMDIgPda49UI';
 begin
+if not (edit1.Text.Contains('https://')) then
+Edit1.Text:='https://'+Edit1.Text;
         TabControl1.SetActiveTabWithTransition(TabItem3, TTabTransition.Slide);
         sito := 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url='
           + Edit1.Text + k;
@@ -148,9 +150,9 @@ begin
                 procedure
                 begin
                         Label7.Visible := true;
-                        Button1.Visible := false;
-                        Button2.Visible := false;
-                        Button3.Visible := false;
+                        Button1.Enabled := false;
+                        Button2.Enabled := false;
+                        Button3.Enabled := false;
                 end).Start;
         jsontesto := NetHTTPClient1.Get(sito).ContentAsString();
         JSONValue := TJSONObject.ParseJSONValue(jsontesto);
@@ -167,7 +169,6 @@ begin
           + k, [Edit1.Text]);
         jsontesto := NetHTTPClient1.Get(sito).ContentAsString();
         JSONValue := TJSONObject.ParseJSONValue(jsontesto);
-        Memo1.Lines.Clear;
         try
                 if JSONValue is TJSONObject then
                 begin
@@ -198,16 +199,11 @@ begin
                 end;
         finally
                 JSONValue.Free;
-                tthread.CreateAnonymousThread(
-                        procedure
-                        begin
                                 Label7.Visible := false;
-                                Button1.Visible := true;
-                                Button2.Visible := true;
-                                Button3.Visible := true;
-                        end).Start;
-
-        end;
+                                Button1.Enabled := true;
+                                Button2.Enabled := true;
+                                Button3.Enabled := true;
+       end;
 end;
 
 procedure TForm1.RESTClient1HTTPProtocolError(Sender: TCustomRESTClient);
