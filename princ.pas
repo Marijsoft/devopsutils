@@ -101,9 +101,9 @@ begin
                         Memo1.Lines.add('Nazione: ' + JSONValue.GetValue<string>
                           ('country'));
                         Memo1.Lines.add
-                          ('Localit‡: ' + JSONValue.GetValue<string>('city'));
+                          ('Localit√†: ' + JSONValue.GetValue<string>('city'));
                         Memo1.Lines.add
-                          ('Societ‡: ' + JSONValue.GetValue<string>('as'));
+                          ('Societ√†: ' + JSONValue.GetValue<string>('as'));
                         Memo1.Lines.add
                           ('Provider: ' + JSONValue.GetValue<string>('asname'));
                         Memo1.Lines.add('Hosting: ' + JSONValue.GetValue<string>
@@ -170,7 +170,7 @@ Edit1.Text:='https://'+Edit1.Text;
         end;
         sito := sito.Format
           ('https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=%s&fields=lighthouseResult/categories/*/score&prettyPrint=false&strategy=mobile&category=performance&category=pwa&category=best-practices&category=accessibility&category=seo'
-          + k, [Edit1.Text]);
+          + p, [Edit1.Text]);
         jsontesto := NetHTTPClient1.Get(sito).ContentAsString();
         JSONValue := TJSONObject.ParseJSONValue(jsontesto);
         try
